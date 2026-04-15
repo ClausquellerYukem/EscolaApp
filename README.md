@@ -1,4 +1,4 @@
-# edu_connect
+# Yukem App Escola
 
 A new Flutter project.
 
