@@ -54,26 +54,26 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i679.StudentRepository>(() => _i865.StudentRepositoryImpl());
     gh.factory<_i161.AuthRemoteDataSource>(
         () => _i161.AuthRemoteDataSource(gh<_i361.Dio>()));
-    gh.factory<_i144.GetStudentsByGuardianUseCase>(() =>
-        _i144.GetStudentsByGuardianUseCase(gh<_i679.StudentRepository>()));
     gh.factory<_i994.TenantInterceptor>(
         () => _i994.TenantInterceptor(gh<_i558.FlutterSecureStorage>()));
     gh.singleton<_i415.SessionManager>(
         () => _i415.SessionManager(gh<_i558.FlutterSecureStorage>()));
+    gh.factory<_i144.GetStudentsByGuardianUseCase>(() =>
+        _i144.GetStudentsByGuardianUseCase(gh<_i679.StudentRepository>()));
+    gh.factory<_i577.AuthInterceptor>(
+        () => _i577.AuthInterceptor(gh<_i415.SessionManager>()));
     gh.factory<_i787.AuthRepository>(() => _i153.AuthRepositoryImpl(
           gh<_i161.AuthRemoteDataSource>(),
           gh<_i415.SessionManager>(),
         ));
-    gh.factory<_i577.AuthInterceptor>(
-        () => _i577.AuthInterceptor(gh<_i415.SessionManager>()));
     gh.factory<_i188.LoginUseCase>(
         () => _i188.LoginUseCase(gh<_i787.AuthRepository>()));
+    gh.factory<_i797.AuthBloc>(() => _i797.AuthBloc(gh<_i188.LoginUseCase>()));
     gh.singleton<_i277.ApiClient>(() => _i277.ApiClient(
           gh<_i361.Dio>(),
           gh<_i577.AuthInterceptor>(),
           gh<_i994.TenantInterceptor>(),
         ));
-    gh.factory<_i797.AuthBloc>(() => _i797.AuthBloc(gh<_i188.LoginUseCase>()));
     return this;
   }
 }
