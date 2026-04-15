@@ -1,0 +1,62 @@
+name: edu_connect
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  flutter_bloc: ^9.1.1
+  bloc: ^9.2.0
+  equatable: ^2.0.5
+
+  # Dependency Injection
+  get_it: ^9.2.1
+  injectable: ^2.4.1
+
+  # Navigation
+  go_router: ^17.2.1
+
+  # API
+  dio: ^5.4.3+1
+  retrofit: ^4.1.1
+  json_annotation: ^4.9.0
+
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_secure_storage: ^10.0.0
+
+  # Security & Auth
+  local_auth: ^3.0.1
+
+  # Utilities
+  dartz: ^0.10.1
+  freezed: ^3.2.5
+  cached_network_image: ^3.3.1
+  intl: ^0.20.2
+  logger: ^2.3.0
+  mobile_scanner: ^7.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.9
+  injectable_generator: ^2.4.1
+  retrofit_generator: ^10.2.5
+  json_serializable: ^6.7.1
+  freezed_annotation: ^3.1.0
+  mocktail: ^1.0.3
+  bloc_test: ^10.0.0
+
+flutter:
+  uses-material-design: true
